@@ -96,7 +96,7 @@ const User = ({ user, loading, repos, getUser, getUserRepos, match }) => {
     </Fragment>
   );
 };
-
+//prop types defined outside instead of inside like in class
 User.propTypes = {
   loading: PropTypes.bool,
   user: PropTypes.object.isRequired,
