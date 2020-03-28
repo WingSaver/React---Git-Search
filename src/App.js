@@ -57,7 +57,6 @@ const App = () => {
     setUsers([]);
     setLoading(false);
   };
-  // this.setState({ users: [], loading: false });
 
   //
   const showAlert = (msg, type) => {
