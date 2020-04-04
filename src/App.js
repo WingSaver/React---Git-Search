@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./component/layout/Navbar";
-import Users from "./component/users/Users";
-import Search from "./component/users/Search";
+import Home from "./component/pages/Home";
+import NotFound from "./component/pages/NotFound";
 import Alert from "./component/layout/Alert";
 import About from "./component/pages/About";
 
@@ -22,18 +22,10 @@ const App = () => {
             <div className='container'>
               <Alert />
               <Switch>
-                <Route
-                  exact
-                  path='/'
-                  render={props => (
-                    <Fragment>
-                      <Search />
-                      <Users />
-                    </Fragment>
-                  )}
-                ></Route>
+                <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/user/:login' component={User} />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
